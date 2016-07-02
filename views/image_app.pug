@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+
+    div(class="col-xs-2 tools")
+      
+      h4 Overlay Opacity
+      div(class="slider")
+        div(class="indicator")
+
+      h4 Zoom
+      button(class="btn btn-sm btn-success zoom-in")
+        span(class="glyphicon glyphicon-plus")
+      button(class="btn btn-sm btn-success zoom-out")
+        span(class="glyphicon glyphicon-minus")
+
+      h4 Tool Selector
+      button(class="btn btn-sm btn-default btn-swipe")
+        span(class="glyphicon glyphicon-resize-horizontal")
+      button(class="btn btn-sm btn-default btn-grab")
+        span(class="glyphicon glyphicon-move")
+  
+
+    div(class="col-xs-10 col-app")
+
+      div(class="app")
+        div(class="zoom-info") 100%
+        div(class="image-wrapper")
+          div(class="images top ", style="background-image: url(" + images.main + ")") 
+          div(class="images overlay", style="background-image: url(" + images.overlay + ")")
+
