@@ -3,4 +3,6 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  a(href='/image_app') To Image Editor
+  p #{images}
+  for image in images
+    a(href='/image_app/' + image.id) Open Image: #{image.id}
