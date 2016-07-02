@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var uri = process.env.MONGOLAB_URI || 'mongodb://localhost/images';
+var uri = process.env.MONGODB_URI || 'mongodb://localhost/images';
 mongoose.connect(uri);
 
 var routes = require('./routes/index');
