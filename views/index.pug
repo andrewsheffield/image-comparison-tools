@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  p #{images}
-  for image in images
-    a(href='/image_app/' + image.id) Open Image: #{image.id}
+  h3 List of Images to run the app on:
+  ul
+    for image in images
+      li
+        a(href='/image_app/' + image.id) Open Image: #{image.id}

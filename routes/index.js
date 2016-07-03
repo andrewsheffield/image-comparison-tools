@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var Image = require('../models/images.js');
 
+/*
+* This will add the database object for the images
+* if no image items are found.
+*/
 Image.find({}, function(err, data) {
 	console.log(data);
 	if (data.length <= 0) {
